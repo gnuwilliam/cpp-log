@@ -20,5 +20,3 @@ done:
 
 run:
 	@./bin/hello
-
-all: clean compile
