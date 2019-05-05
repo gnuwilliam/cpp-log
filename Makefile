@@ -1,4 +1,5 @@
-TARGET = hello
+SRCDIR = src
+TARGET = log
 BINDIR = bin
 
 all: clean compile done
@@ -13,10 +14,10 @@ clean:
 
 compile:
 	@echo "\033[93mCompiling files..."
-	@clang++ -arch x86_64 -o bin/hello src/*.cpp
+	@clang++ -arch x86_64 -o $(BINDIR)/$(TARGET) $(SRCDIR)/*.cpp
 
 done:
 	@echo "\033[92mFinished compiling!"
 
 run:
-	@./bin/hello
+	@./bin/log
